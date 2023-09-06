@@ -9,7 +9,7 @@ const WALLET_EXPORT_FILE = './wallets.json'
 
 function main() {
     
-    readline.question(`What do you want to name the wallet? This can be helpful for future reference. (Return to skip)`, input => {
+    readline.question(`What do you want to name the wallet? This can be helpful for future reference. (Return to skip) `, input => {
         const newWallet = Wallet.createRandom()
 
         let wallets
