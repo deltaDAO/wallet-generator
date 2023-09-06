@@ -21,11 +21,13 @@ function main() {
 
         if(!Array.isArray(wallets)) wallets = []
 
+        const { address, privateKey, mnemonic } = newWallet
+
         wallets.push({
             identifier: input,
-            address: newWallet.address,
-            privateKey: newWallet.privateKey,
-            mnemonic: newWallet.mnemonic
+            address,
+            privateKey,
+            mnemonic
         })
 
         fs.writeFileSync(WALLET_EXPORT_FILE, JSON.stringify(wallets, null, 2))
