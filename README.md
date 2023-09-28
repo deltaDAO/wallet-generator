@@ -13,26 +13,27 @@
 git clone https://github.com/deltaDAO/random-wallet-generator.git
 ```
 
-2. Install the dependencies
+2. Install the package to your machine
 
 ```
-npm install
+npm install -g
 ```
 
 3. And start the generator
 
 ```
-npm start
+wallet-generator --help
 ```
 
-4. You will be asked to enter an identifier for the wallet that will be created:
+4. Creating new wallets
+You can create a new wallet using the following command:
 ```
-# What do you want to name the wallet? This can be helpful for future reference. (Return to skip)
+wallet-generator create --password mypassword
 ```
-Simply enter a name that's easy for you to remember or skip this step.
+Make sure to specify your own password that will be used to encrypt your wallet.
+The created wallet will be available in the `wallets` directory.
 
-5. The wallet will be created in a file called `wallets.json`
-This file will be used to store all wallets you create using this generator.
-
-> [!Note]
-> Make sure to delete the JSON File regularly, as this will contain the `privateKey` and `mnemonic` of your newly created wallet and should only be used to get you started when setting up the new account with your preferred wallet solution.
+Optionally you can provide a filename that will be used for the created JSON file:
+```
+wallet-generator create --name myWalletName --password mypassword
+```
