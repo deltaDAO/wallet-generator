@@ -1,42 +1,10 @@
-const { Wallet } = require('ethers')
-const fs = require('fs')
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout,
-});
-  
-const WALLET_EXPORT_FILE = './wallets.json'
+import { program } from 'commander'
+import createWallet from './commands/createWallet.js'
 
-function main() {
-    
-    readline.question(`What do you want to name the wallet? This can be helpful for future reference. (Return to skip) `, input => {
-        const newWallet = Wallet.createRandom()
+program.command('create')
+    .description('Create a new wallet')
+    .requiredOption('-pw, --password <password>', 'Set the password to use for encryption.')
+    .option('-n, --name <name>', 'Name your new wallet. This will be the filename.')
+    .action(createWallet)
 
-        let wallets
-        try {
-            wallets = JSON.parse(fs.readFileSync(WALLET_EXPORT_FILE))
-        } catch {
-            wallets = []
-        }
-
-        if(!Array.isArray(wallets)) wallets = []
-
-        const { address, privateKey, mnemonic } = newWallet
-
-        wallets.push({
-            identifier: input,
-            address,
-            privateKey,
-            mnemonic
-        })
-
-        fs.writeFileSync(WALLET_EXPORT_FILE, JSON.stringify(wallets, null, 2))
-
-        console.log(`New wallet created with address ${newWallet.address}. See ${WALLET_EXPORT_FILE}`)
-        
-        readline.close();
-    });
-    
-}
-
-main()
+program.parse()
