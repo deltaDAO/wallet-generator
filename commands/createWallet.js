@@ -1,10 +1,9 @@
-import { Wallet, ethers } from 'ethers'
-import fs from 'fs'
-import chalk from 'chalk'
+const { Wallet } = require('ethers')
+const fs = require('fs')
+const chalk = require('chalk')
+const { WALLET_EXPORT_DIR } = require('../constants')
 
-const WALLET_EXPORT_DIR = './wallets'
-
-export default async function createWallet(options, command) {
+async function createWallet(options, command) {
     try {
         const { name, password } = options
         
@@ -21,3 +20,5 @@ export default async function createWallet(options, command) {
         console.error(e)
     }
 }
+
+module.exports = createWallet

@@ -1,8 +1,7 @@
 {
   "name": "@deltadao/random-wallet-generator",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
+  "description": "Generate web3 wallets using ethers",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -11,11 +10,11 @@
     "wallet-generator": "./index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "deltaDAO",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^5.3.0",
+    "chalk": "^4.1.2",
     "commander": "^11.0.0",
-    "ethers": "^6.7.1"
+    "ethers": "^5.7.0"
   }
 }
