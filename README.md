@@ -16,7 +16,7 @@ git clone https://github.com/deltaDAO/wallet-generator.git
 2. Install the package to your machine
 
 ```
-cd wallet-generator && npm install -g
+cd wallet-generator && npm install && npm i -g
 ```
 
 3. And start the generator
