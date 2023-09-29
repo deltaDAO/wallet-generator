@@ -10,13 +10,13 @@
 1. Simply clone the repository
 
 ```
-git clone https://github.com/deltaDAO/random-wallet-generator.git
+git clone https://github.com/deltaDAO/wallet-generator.git
 ```
 
 2. Install the package to your machine
 
 ```
-npm install -g
+cd wallet-generator && npm install -g
 ```
 
 3. And start the generator
