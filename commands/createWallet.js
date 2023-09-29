@@ -24,6 +24,9 @@ async function createWallet(options) {
         const filename = `${WALLET_EXPORT_DIR}/${name || newWallet.address}.json`
         const jsonToWrite = await newWallet.encrypt(password)
 
+        if(!fs.existsSync(WALLET_EXPORT_DIR))
+            fs.mkdirSync(WALLET_EXPORT_DIR)
+
         fs.writeFileSync(filename, JSON.stringify(JSON.parse(jsonToWrite), null, 2))
 
         console.log(chalk.green(`New wallet created with address `) + chalk.green.bold(newWallet.address))
