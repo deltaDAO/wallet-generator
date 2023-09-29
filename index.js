@@ -8,6 +8,7 @@ program.command('create')
     .description('Create a new wallet')
     .requiredOption('-pw, --password <password>', 'Set the password to use for encryption.')
     .option('-n, --name <name>', 'Name your new wallet. This will be the filename.')
+    .option('-pk, --privateKey <privateKey>', 'Create a wallet from a given privat key.')
     .action(createWallet)
 
 program.command('list')

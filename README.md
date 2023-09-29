@@ -37,3 +37,4 @@ Optionally you can provide a filename that will be used for the created JSON fil
 ```
 wallet-generator create --name myWalletName --password mypassword
 ```
+
