@@ -25,8 +25,7 @@ cd wallet-generator && npm install -g
 wallet-generator --help
 ```
 
-4. Creating new wallets
-You can create a new wallet using the following command:
+4. Creating a new wallet is possible using the following command:
 ```
 wallet-generator create --password mypassword
 ```
@@ -38,12 +37,12 @@ Optionally you can provide a filename that will be used for the created JSON fil
 wallet-generator create --name myWalletName --password mypassword
 ```
 
-It is also possible to create a wallet and export the encrypted JSON from a given `privateKey`` if desired:
+It is also possible to create a wallet and export the encrypted JSON from a given `privateKey` if desired:
 ```
 wallet-generator create --privateKey abcd123... --password mypassword
 ```
 
-5. Available Arguments
+**Available Arguments (create)**
 
 | Argument       | Shortform | Required  | Description |
 |----------------|-----------|-----------|-------------|
