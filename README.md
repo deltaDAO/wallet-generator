@@ -38,3 +38,16 @@ Optionally you can provide a filename that will be used for the created JSON fil
 wallet-generator create --name myWalletName --password mypassword
 ```
 
+It is also possible to create a wallet and export the encrypted JSON from a given `privateKey`` if desired:
+```
+wallet-generator create --privateKey abcd123... --password mypassword
+```
+
+5. Available Arguments
+
+| Argument       | Shortform | Required  | Description |
+|----------------|-----------|-----------|-------------|
+| `--password`   | `-pw`     | x         | Set the password to use for encryption. |
+| `--privateKey` | `-pk`     |           | Name your new wallet. This will be the filename. |
+| `--name`       | `-n`      |           | Create a wallet from a given privat key. |
+
