@@ -1,4 +1,4 @@
-# random-wallet-generator
+# wallet-generator
 
 ## How to use?
 
