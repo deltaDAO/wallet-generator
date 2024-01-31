@@ -47,6 +47,6 @@ wallet-generator create --privateKey 'abcd123'... --password 'mypassword'
 | Argument       | Shortform | Required  | Description |
 |----------------|-----------|-----------|-------------|
 | `--password`   | `-pw`     | x         | Set the password to use for encryption. |
-| `--privateKey` | `-pk`     |           | Create a wallet from a given privat key. |
+| `--privateKey` | `-pk`     |           | Create a wallet from a given private key. |
 | `--name`       | `-n`      |           | Name your new wallet. This will be the filename. |
 
