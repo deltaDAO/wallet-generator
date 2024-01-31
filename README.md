@@ -27,19 +27,19 @@ wallet-generator --help
 
 4. Creating a new wallet is possible using the following command:
 ```
-wallet-generator create --password mypassword
+wallet-generator create --password 'mypassword'
 ```
 Make sure to specify your own password that will be used to encrypt your wallet.
 The created wallet will be available in the `wallets` directory.
 
 Optionally you can provide a filename that will be used for the created JSON file:
 ```
-wallet-generator create --name myWalletName --password mypassword
+wallet-generator create --name 'myWalletName' --password 'mypassword'
 ```
 
 It is also possible to create a wallet and export the encrypted JSON from a given `privateKey` if desired:
 ```
-wallet-generator create --privateKey abcd123... --password mypassword
+wallet-generator create --privateKey 'abcd123'... --password 'mypassword'
 ```
 
 **Available Arguments (create)**
